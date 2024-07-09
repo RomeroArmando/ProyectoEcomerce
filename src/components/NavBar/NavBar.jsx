@@ -11,7 +11,11 @@ const NavBar = () => {
 
       <div className="container-fluid">
 
-      <img className="brandIcon" src={logo} alt="kiki" />
+        <div className="brand">
+          <img className="brandIcon" src={logo} alt="kiki" />
+          <p>KIKI'S HARDWARE</p>
+        </div>
+
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -28,7 +32,16 @@ const NavBar = () => {
             <a className="nav-link" href="#">Gabinetes</a>
             <a className="nav-link" href="#">GPU</a>
             <a className="nav-link" href="#">Rams</a>
-            <a className="nav-link disabled" aria-disabled="true">Builds</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Builds
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">AMD</a></li>
+                <li><a class="dropdown-item" href="#">Intel</a></li>
+                <li><a class="dropdown-item" href="#">Presupuestos</a></li>
+              </ul>
+            </li>
 
           </div>
 
@@ -38,7 +51,7 @@ const NavBar = () => {
 
       </div>
 
-    </nav>    
+    </nav>
 
   )
 
