@@ -1,7 +1,8 @@
-import logo from "../img/icono.png"
+import logo from "../../assest/img/icono.png"
 import CartWidget from "./CartWidget"
 import React from 'react'
 import "./NavBar.scss"
+import { Link } from "react-router-dom"
 
 const NavBar = () => {
 
@@ -11,10 +12,10 @@ const NavBar = () => {
 
       <div className="container-fluid">
 
-        <div className="brand">
-          <img className="brandIcon" src={logo} alt="kiki" />
-          <p>KIKI'S HARDWARE</p>
-        </div>
+        <Link to="/" className="brand">
+            <img className="brandIcon" src={logo} alt="kiki" />
+            <p>KIKI'S HARDWARE</p>
+        </Link>
 
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,19 +28,18 @@ const NavBar = () => {
 
           <div className="navbar-nav">
 
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
-            <a className="nav-link" href="#">Procesadores</a>
-            <a className="nav-link" href="#">Gabinetes</a>
-            <a className="nav-link" href="#">GPU</a>
-            <a className="nav-link" href="#">Rams</a>
+            <Link to="/" className="nav-link active" aria-current="page" href="#">Home</Link>
+            <Link to="/categoria/procesador" className="nav-link" href="#">Procesadores</Link>
+            <Link to="/categoria/gabinete" className="nav-link" href="#">Gabinetes</Link>
+            <Link to="/categoria/gpu" className="nav-link" href="#">GPU</Link>
+            <Link to="/categoria/ram" className="nav-link" href="#">Rams</Link>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Builds
-              </a>
+              <Link class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Perifericos
+              </Link>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">AMD</a></li>
-                <li><a class="dropdown-item" href="#">Intel</a></li>
-                <li><a class="dropdown-item" href="#">Presupuestos</a></li>
+                <li><Link to="/categoria/mouse" class="dropdown-item" href="#">Mouse</Link></li>
+                <li><Link to="/categoria/teclado" class="dropdown-item" href="#">teclados</Link></li>
               </ul>
             </li>
 
