@@ -5,39 +5,63 @@ import obtenerProductos from '../../data/data'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 
-
+import { getDocs, collection, query, where } from 'firebase/firestore'
+import db from '../../db/db.js'
 
 const ItemListContainer = ({saludo}) => {
   const [productos, setProductos] = useState([]);
   const { idCategoria } = useParams();
 
+  const getProductos = async() =>{
+    
+    try {
+      const productosRef = collection(db, "productos")
+    const dataDb = await getDocs(productosRef)
+    const data = dataDb.docs.map( (productDb) => {
+
+    return{ id: productDb.id, ...productDb.data() }
+      
+    } )
+
+    setProductos(data);
+    //console.log(data)}
+    
+    } catch (error) {
+
+      console.log(error)
+
+    }
+
+
+  }
+
+  const getProductsBycategory = async() => {
+
+    const productosRef = collection(db, "productos")
+    const q = query( productosRef, where( "categoria", "==", idCategoria ))
+    const dataDb = await getDocs(q)
+
+    const data = dataDb.docs.map( (productDb) => {
+
+      return{ id: productDb.id, ...productDb.data() }
+
+    } )
+    setProductos(data);
+  }
+
   useEffect(() => {
-    obtenerProductos()
-      .then((respuesta) => {
-        if (idCategoria) {
+    console.log(idCategoria)
+    if (idCategoria){
 
-          //filtrar los productos por esa categoria recibida
-          const productosFiltrados = respuesta.filter( (producto)=> producto.categoria === idCategoria)
-          setProductos(productosFiltrados)
-          
-        } else {
+      getProductsBycategory()
 
-          //guardamos todos los productos
-          setProductos(respuesta);
+    } else {
 
-        }
-      })
-      .catch((error) => {
+      console.log("nada")
 
-        console.error(error);
+      getProductos()
 
-      })
-      .finally(() => {
-
-        console.log("Finalizo la promesa");
-
-      });
-
+    }
   }, [idCategoria]);
 
   return (
