@@ -4,10 +4,15 @@ import { Link } from "react-router-dom"
 
 const Item = ({ producto }) => {
   return (
-    <div style={{margin:"0 100px"}}>
-      <img width={100} src={producto.imagen} alt="" />
+    <div className='card'>
+      <div className='img-card'>
+        <img src={producto.imagen} />
+      </div>
       <p>{producto.nombre}</p>
-      <Link to={ "/detalle/" + producto.id } style={{ color: "black" }} >Ver detalles</Link>
+      <p>Precio: ${producto.precio}</p>
+      <Link to={ "/detalle/" + producto.id } >
+      Ver detalles
+      </Link>
     </div>
   )
 }

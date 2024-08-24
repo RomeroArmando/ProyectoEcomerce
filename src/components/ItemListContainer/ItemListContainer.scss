@@ -1,5 +1,42 @@
-.itemlistcontainer{
-
+.itemlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
     text-align: center;
+    width: 250px;
+    margin: 50px 100px 50px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+  .card p {
+    font-size: 20px;
+    padding: 20px 10px;
+  }
+  .img-card {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+  }
+  .img-card img {
+    width: 100%;
+    
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .card .link {
+    background-color: rgb(35, 12, 73);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px 10px;
+    border: 2px solid white;
+    font-size: 15px;
+    color: rgb(229, 229, 229);
+  }
 
-}
+  .img {
+    align-items: center;
+    width: 100%;
+  }
