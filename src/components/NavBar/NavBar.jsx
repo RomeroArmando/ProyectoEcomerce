@@ -1,7 +1,7 @@
 import logo from "../../assest/img/icono.png"
 import CartWidget from "./CartWidget"
 import React from 'react'
-import "./NavBar.scss"
+import "./NavBar.css"
 import { Link } from "react-router-dom"
 
 const NavBar = () => {
@@ -14,7 +14,7 @@ const NavBar = () => {
 
         <Link to="/" className="brand">
             <img className="brandIcon" src={logo} alt="kiki" />
-            <p>KIKI'S HARDWARE</p>
+
         </Link>
 
 
@@ -29,17 +29,35 @@ const NavBar = () => {
           <div className="navbar-nav">
 
             <Link to="/" className="nav-link active" aria-current="page" href="#">Home</Link>
-            <Link to="/categoria/procesador" className="nav-link" href="#">Procesadores</Link>
-            <Link to="/categoria/gabinete" className="nav-link" href="#">Gabinetes</Link>
-            <Link to="/categoria/gpu" className="nav-link" href="#">GPU</Link>
-            <Link to="/categoria/ram" className="nav-link" href="#">Rams</Link>
+            
+            
+            <Link to="/categoria/Abrigos" className="nav-link" href="#">Abrigos</Link>
+            
+            <Link to="/categoria/Conjuntos" className="nav-link" href="#">Conjuntos</Link>
+            
+            <Link to="/categoria/Vestidos" className="nav-link" href="#">Vestidos</Link>
+            
+            <Link to="/categoria/Carteras" className="nav-link" href="#">Carteras</Link>
             <li class="nav-item dropdown">
               <Link class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Perifericos
+                Superior
               </Link>
               <ul class="dropdown-menu">
-                <li><Link to="/categoria/mouse" class="dropdown-item" href="#">Mouse</Link></li>
-                <li><Link to="/categoria/teclado" class="dropdown-item" href="#">teclados</Link></li>
+                <li><Link to="/categoria/Camisas" className="nav-link" href="#">Camisas</Link></li>
+                <li><Link to="/categoria/Chombas" className="nav-link" href="#">Chombas</Link></li>
+                <li><Link to="/categoria/Remeras" className="nav-link" href="#">Remeras</Link></li>
+                <li><Link to="/categoria/Muscolosas" className="nav-link" href="#">Musculosas</Link></li>
+                <li><Link to="/categoria/Top" className="nav-link" href="#">Tops</Link></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <Link class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Inferior
+              </Link>
+              <ul class="dropdown-menu">
+                <li><Link to="/categoria/Shorts" className="nav-link" href="#">Shorts</Link></li>
+                <li><Link to="/categoria/Jeans" className="nav-link" href="#">Jeans</Link></li>
+                <li><Link to="/categoria/Polleras" className="nav-link" href="#">Polleras</Link></li>
               </ul>
             </li>
 

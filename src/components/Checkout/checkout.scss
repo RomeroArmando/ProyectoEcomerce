@@ -1,0 +1,29 @@
+/* Estilo para la sección de orden completada */
+.order-completed {
+    max-width: 600px; /* Ancho máximo de la sección */
+    margin: 40px auto; /* Centrando la sección con márgenes superior e inferior */
+    padding: 20px; /* Padding interno */
+    background-color: #f9fff9; /* Color de fondo suave para resaltar la sección */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Centra el texto en la sección */
+  
+    h2 {
+      font-size: 28px; /* Tamaño de fuente para el encabezado */
+      color: #4caf50; /* Color verde para el encabezado */
+      margin-bottom: 15px; /* Espacio debajo del encabezado */
+    }
+  
+    p {
+      font-size: 20px; /* Tamaño de fuente para el párrafo */
+      color: #333; /* Color del texto del párrafo */
+      margin-top: 0; /* Sin margen superior para un mejor ajuste */
+    }
+  
+    /* Estilo adicional para el ID de orden */
+    .order-id {
+      font-weight: bold; /* Negrita para el ID de orden */
+      color: #1976d2; /* Color azul para destacar el ID de orden */
+      margin-top: 10px; /* Espacio superior */
+    }
+  }

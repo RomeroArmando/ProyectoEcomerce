@@ -71,7 +71,7 @@ const ItemListContainer = ({ saludo }) => {
 
   return (
     <div>
-      <p>{saludo}</p>
+      
       {estaCargando ? (
         <div>
           <ClimbingBoxLoader color="white" />

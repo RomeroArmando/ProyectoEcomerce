@@ -1,34 +1,86 @@
-.checkout {
-    width: 100%;
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .form-checkout {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-  }
-  .form-checkout input {
-    font-size: 25px;
-    border-radius: 5px;
-    margin: 20px 0;
-  }
-  .button-form {
-    background-color: rgb(19, 19, 19);
-    border: none;
-    color: white;
-    width: 200px;
-    border-radius: 5px;
-    border: 2px solid rgb(93, 93, 93);
-    font-size: 20px;
-    padding: 10px 0;
-    margin: 10px 0;
-    text-align: center;
-  }
+/* Contenedor principal del formulario */
+.form-checkout {
+  max-width: 500px;
+  margin: 30px auto 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre los elementos del formulario */
+}
+
+/* Etiquetas del formulario */
+.form-checkout label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Campos de entrada de texto */
+.form-checkout input[type="text"],
+.form-checkout input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.form-checkout input[type="text"]:focus,
+.form-checkout input[type="email"]:focus {
+  border-color: #4caf50; /* Color del borde al enfocar */
+  outline: none;
+}
+
+/* Botón de envío */
+.button-form {
+  padding: 10px 0;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-form:hover {
+  background-color: #3d8f3d; /* Color de fondo al pasar el mouse */
+}
+
+.order-completed {
+  max-width: 600px; /* Ancho máximo de la sección */
+  margin: 40px auto; /* Centrando la sección con márgenes superior e inferior */
+  padding: 20px; /* Padding interno */
+  background-color: #f9fff9; /* Color de fondo suave para resaltar la sección */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  text-align: center; /* Centra el texto en la sección */
+}
+
+.order-completed h2 {
+  font-size: 28px; /* Tamaño de fuente para el encabezado */
+  color: #4caf50; /* Color verde para el encabezado */
+  margin-bottom: 15px; /* Espacio debajo del encabezado */
+}
+
+.order-completed p {
+  font-size: 20px; /* Tamaño de fuente para el párrafo */
+  color: #333; /* Color del texto del párrafo */
+  margin-top: 0; /* Sin margen superior para un mejor ajuste */
+}
+
+/* Estilo adicional para el ID de orden */
+.order-id {
+  font-weight: bold; /* Negrita para el ID de orden */
+  color: #1976d2; /* Color azul para destacar el ID de orden */
+  margin-top: 10px; /* Espacio superior */
+}

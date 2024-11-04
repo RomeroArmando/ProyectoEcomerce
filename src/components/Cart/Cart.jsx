@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import { LiaTrashAlt } from 'react-icons/lia';
-//import './cart.css';
+import '../Cart/cart.scss';
 
 const Cart = () => {
   const { carrito, precioTotal, borrarProducto, vaciarCarrito } = useContext(CartContext);

@@ -13,7 +13,7 @@ import Checkout from './components/Checkout/checkout'
 function App() {
 
   
-
+// para iniciar este proyecto es "npm run dev"
 
   return (
       <BrowserRouter>

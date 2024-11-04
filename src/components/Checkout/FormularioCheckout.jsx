@@ -9,6 +9,10 @@ const FormularioCheckout = ({ datosForm, handleChangeInput, handleSubmitForm }) 
   
         <label>Email</label>
         <input type="email" name="email" value={datosForm.email} onChange={handleChangeInput} />
+
+        <label>Confirme su Email</label>
+        <input type="email" name="emailCheck" value={datosForm.emailCheck} onChange={handleChangeInput} />
+        
   
         <button type="submit" className="button-form">
           Enviar orden

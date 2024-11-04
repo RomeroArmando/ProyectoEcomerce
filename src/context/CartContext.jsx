@@ -8,12 +8,8 @@ const CartContext = createContext();
 // Este mismo envuelve los componentes que van a poder consumir la info del context
 const CartProvider = ({ children }) => {
 
-  const guardadoLocal = (nuevoCarrito) => {
+ 
 
-    window.localStorage.clear()
-    window.localStorage.setItem("carro", JSON.stringify(nuevoCarrito))
-
-  }
   const [carrito, setCarrito] = useState([]);
 
   const agregarProducto = (productoNuevo) => {
@@ -37,7 +33,7 @@ const CartProvider = ({ children }) => {
       //Agregar el producto como nuevo
       setCarrito([...carrito, productoNuevo]);
     }
-    guardadoLocal();
+
   };
 
   //Funcion para detectar si el producto a añadir esta en el carrito o no
